@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import Logo from '../componentes/Logo';
-import { useNavigation } from '@react-navigation/native';  // Importe useNavigation
+import { useNavigation } from '@react-navigation/native'; 
 import Cadastro from './Cadastro';
 
    
@@ -11,30 +11,30 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  const navigation = useNavigation();  // Use useNavigation para obter a propriedade de navegação
+  const navigation = useNavigation();  
   const navegarAcessar = () => {
     navigation.navigate("Acessar")
   }
   const handleLogin = () => {
-    // Lógica de autenticação
+    
     if (email !== '' && senha !== '') {
-      // Autenticação bem-sucedida
-      alert('Autenticação bem-sucedida');
+      
+      alert('Autenticação feito, agora assista e aproveite.');
       
      navegarAcessar()
       
-      // Redireciona para a página de login ou qualquer outra página necessária
+
     } else {
       alert('Informações inválidas');
     }
   };
 
   const navigationToAcessar = () => {
-    navigation.navigate('Acessar');  // Navegue para a tela de Cadastro
+    navigation.navigate('Acessar');  
   };
 
   const navigateToCadastro = () => {
-    navigation.navigate('Cadastro');  // Navegue para a tela de Cadastro
+    navigation.navigate('Cadastro'); 
   };
 
 

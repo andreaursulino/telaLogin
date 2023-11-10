@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import Logo from '../componentes/Logo';
-import { useNavigation } from '@react-navigation/native';  // Importe useNavigation
+import { useNavigation } from '@react-navigation/native'; 
 import Login from './Login';
 
 
@@ -10,18 +10,17 @@ export default function Cadastro({e}) {
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
 
-    const navigation = useNavigation();  // Adicione isso para obter a propriedade de navegação
+    const navigation = useNavigation();  
     const handleCadastro = () => {
         console.log('entrou na função')
-        // Lógica de cadastro
+     
         if (email && senha && senha === confirmarSenha) {
-            // Lógica de cadastro bem-sucedida
-            alert('Cadastro realizado com sucesso');
+        
+            alert('Cadastro foi feito, agora entre e assista.');
 
-            //falta armazenar os dados
-            navigation.navigate('Login'); // Redireciona para a tela de login
+            navigation.navigate('Login'); 
         } else {
-            alert('Preencha todos os campos corretamente e confirme a senha.');
+            alert('Coloque seus dados e confirme a sua senha.');
         }
     };
 
@@ -57,7 +56,6 @@ export default function Cadastro({e}) {
             </TouchableOpacity>
         </View>
     );
-    //exports.
 }
 
 
